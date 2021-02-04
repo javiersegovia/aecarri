@@ -27,3 +27,5 @@ declare global {
     }
   }
 }
+
+declare module 'react-full-page'

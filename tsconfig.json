@@ -19,18 +19,15 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@lib/*": ["src/lib/*"],
-      "@pages/*": ["src/pages/*"],
-      "@root/*": ["./*"],
-      "@styles/*": ["styles/*"],
-      "@tests/*": ["tests/*"],
-      "@views/*": ["src/views/*"]
-    }
+    "baseUrl": "."
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "tests/setuptjs"],
-  "files": ["twin.d.ts"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "tests/setuptjs"
+  ],
+  "files": ["types.d.ts"]
 }
