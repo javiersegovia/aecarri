@@ -6,33 +6,12 @@ import { Container } from 'src/components/UI'
 import { useQuery } from 'react-query'
 import { Category } from '../../utils/types'
 
-const links = [
-  {
-    title: 'Régimen no tiene cómo seguir manteniendo al estado totalitario',
-    url:
-      'https://www.elnacional.com/venezuela/ecarri-regimen-no-tiene-como-seguir-manteniendo-al-estado-totalitario/',
-  },
-  {
-    title: 'Hay que avanzar a la dolarización formal y seria del país',
-    url:
-      'https://www.elnacional.com/economia/antonio-ecarri-hay-que-avanzar-a-la-dolarizacion-formal-y-seria-del-pais/',
-  },
-  {
-    title: 'El socialismo convirtió a Venezuela en una fábrica de pobres',
-    url:
-      'https://www.elnacional.com/venezuela/antonio-ecarri-el-socialismo-convirtio-a-venezuela-en-una-fabrica-de-pobres/ ',
-  },
-]
-
 const IssueCategoryPage = () => {
   const { id } = useRouter().query
 
-  const { data: category, isLoading, error } = useQuery<Category>(
-    `/categories/${id}`,
-    {
-      enabled: !!id,
-    }
-  )
+  const { data: category } = useQuery<Category>(`/categories/${id}`, {
+    enabled: !!id,
+  })
 
   return (
     <>
@@ -68,18 +47,6 @@ const IssueCategoryPage = () => {
                   Lo sentimos. Por ahora no hay artículos disponibles.
                 </h3>
               )}
-              {/* {category.articles.map(({ title, url }) => (
-                <li key={title}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    tw="block"
-                  >
-                    {title}
-                  </a>
-                </li>
-              ))} */}
             </ul>
           </>
         )}
@@ -87,5 +54,7 @@ const IssueCategoryPage = () => {
     </>
   )
 }
+
+// TODO: add static path to remove loaders and speed up the page
 
 export default IssueCategoryPage
