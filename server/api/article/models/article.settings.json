@@ -17,7 +17,8 @@
       "unique": true
     },
     "category": {
-      "model": "category"
+      "model": "category",
+      "via": "articles"
     },
     "title": {
       "type": "string",

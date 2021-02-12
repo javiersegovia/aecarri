@@ -3,7 +3,8 @@ import _tw from 'twin.macro'
 import Link from 'next/link'
 import FullScreen from 'src/components/UI/FullScreen'
 import { GiBookmarklet } from 'react-icons/gi'
-
+import { useQuery } from 'react-query'
+import { Category } from 'src/utils/types'
 interface IssueProps {
   icon: React.ComponentType<{ className?: string }>
   title: string
@@ -22,6 +23,8 @@ const Issue = ({ icon: Icon, title, href }: IssueProps) => {
 }
 
 const Issues = () => {
+  const { data: categories } = useQuery<Category[]>('/categories')
+
   return (
     <FullScreen
       tw="bg-green-700 pt-40"
@@ -39,33 +42,18 @@ const Issues = () => {
         <p tw="mt-2 ml-auto" className="text-shadow">
           Haz click en cualquier asunto para conocer más »
         </p>
-        <section tw="grid grid-flow-col gap-6 mt-10 mx-auto">
-          <Issue
-            href="/posiciones-politicas/educacion"
-            title="Educación"
-            icon={GiBookmarklet}
-          />
-          <Issue
-            href="/posiciones-politicas/economia"
-            title="Economía"
-            icon={GiBookmarklet}
-          />
-          <Issue
-            href="/posiciones-politicas/derecho"
-            title="Derecho"
-            icon={GiBookmarklet}
-          />
-          <Issue
-            href="/posiciones-politicas/salud"
-            title="Salud"
-            icon={GiBookmarklet}
-          />
-          <Issue
-            href="/posiciones-politicas/otros"
-            title="Otros"
-            icon={GiBookmarklet}
-          />
-        </section>
+        {categories && (
+          <section tw="grid grid-flow-col gap-6 mt-10 mx-auto">
+            {categories.map((category) => (
+              <Issue
+                key={category.id}
+                href={`/posiciones-politicas/${category.id}`}
+                title={category.name}
+                icon={GiBookmarklet}
+              />
+            ))}
+          </section>
+        )}
       </header>
     </FullScreen>
   )

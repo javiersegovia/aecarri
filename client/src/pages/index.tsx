@@ -7,6 +7,10 @@ import { FullPage, Slide } from 'react-full-page'
 import { Header, Biography, Issues } from '../views/home'
 import Organizations from 'src/views/home/Organizations'
 import Contact from 'src/views/home/Contact'
+import { GetStaticProps } from 'next'
+
+import { createQueryClient } from 'src/utils/client'
+import { dehydrate } from 'react-query/hydration'
 
 const HomePage = () => {
   return (
@@ -31,6 +35,19 @@ const HomePage = () => {
       </Slide>
     </FullPage>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const queryClient = createQueryClient()
+  await queryClient.prefetchQuery('/home')
+  await queryClient.prefetchQuery('/categories')
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+    revalidate: 5,
+  }
 }
 
 export default HomePage

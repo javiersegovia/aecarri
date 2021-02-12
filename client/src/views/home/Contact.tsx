@@ -1,8 +1,12 @@
 import React from 'react'
 import _tw from 'twin.macro'
 import FullScreen from 'src/components/UI/FullScreen'
+import { useQuery } from 'react-query'
+import { HomeData } from 'src/utils/types'
 
 const Contact = () => {
+  const { data: homeData } = useQuery<HomeData>('/home')
+
   return (
     <FullScreen
       tw="bg-green-700 pt-40 bg-top"
@@ -19,13 +23,18 @@ const Contact = () => {
             Contacto
           </h1>
           <section tw="bg-white rounded-md shadow p-10 mt-5 ml-auto text-gray-800">
-            <p tw="block">
-              <span tw="font-medium mr-2">Correo electrónico:</span>
-              aecarri@mail.com
-            </p>
-            <p>
-              <span tw="font-medium mr-2">WhatsApp:</span>+584121231231
-            </p>
+            {homeData && (
+              <>
+                <p tw="block">
+                  <span tw="font-medium mr-1">Correo electrónico:</span>
+                  {homeData.contact_email}
+                </p>
+                <p>
+                  <span tw="font-medium mr-1">WhatsApp:</span>
+                  {homeData.contact_phone}
+                </p>
+              </>
+            )}
           </section>
         </div>
       </header>

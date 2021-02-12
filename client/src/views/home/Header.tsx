@@ -2,6 +2,8 @@ import React from 'react'
 import _tw from 'twin.macro'
 import { FiInstagram, FiTwitter, FiFacebook, FiYoutube } from 'react-icons/fi'
 import FullScreen from 'src/components/UI/FullScreen'
+import { HomeData } from 'src/utils/types'
+import { useQuery } from 'react-query'
 
 interface SocialIconProps {
   children: React.ReactNode
@@ -28,11 +30,12 @@ const socialLinks = {
 }
 
 const Header = () => {
+  const { data: homeData } = useQuery<HomeData>('/home')
+
   return (
     <FullScreen
       tw="bg-green-700"
       style={{
-        // backgroundImage: `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/images/people1.jpeg)`,
         backgroundImage: `linear-gradient(rgba(40, 0, 70, .4), rgba(50, 0, 100, .35)), url(/images/people1.jpeg)`,
       }}
     >
@@ -40,11 +43,14 @@ const Header = () => {
         tw="my-auto pt-8 px-10 lg:px-20 text-white"
         className="text-shadow"
       >
-        <h1 tw="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl leading-normal">
-          &quot;Elit mollit dolore labore fugiat est nisi. Culpa consequat do
-          officia mollit ad deserunt non adipisicing magna...&quot;
-        </h1>
-        <div tw="mt-10 h-1 bg-white w-24 rounded-sm" />
+        {homeData && (
+          <>
+            <h1 tw="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl leading-normal">
+              {homeData.phrase}
+            </h1>
+            <div tw="mt-10 h-1 bg-white w-24 rounded-sm" />
+          </>
+        )}
         <div tw="mt-10 flex space-x-6">
           <SocialIcon href={socialLinks.instagram}>
             <FiInstagram />

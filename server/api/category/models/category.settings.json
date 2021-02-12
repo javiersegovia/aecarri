@@ -15,6 +15,10 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "articles": {
+      "via": "category",
+      "collection": "article"
     }
   }
 }
