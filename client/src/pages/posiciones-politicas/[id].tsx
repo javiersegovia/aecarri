@@ -24,30 +24,48 @@ const IssueCategoryPage = () => {
       >
         <GoBack />
       </div>
-      <Container tw="mt-10 prose">
+      <Container tw="mt-10">
         {category && (
           <>
-            <h1 tw="text-center">{category.name}</h1>
-            <ul tw="mt-10 text-lg text-justify pb-20 space-y-2">
-              {category.articles.length ? (
-                category.articles.map(({ title, url }) => (
-                  <li key={title}>
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      tw="block"
-                    >
-                      {title}
-                    </a>
-                  </li>
-                ))
-              ) : (
-                <h3 tw="text-center">
-                  Lo sentimos. Por ahora no hay artículos disponibles.
-                </h3>
-              )}
-            </ul>
+            <h1 tw="text-center text-5xl font-bold border border-black py-4">
+              {category.name}
+            </h1>
+
+            {category.youtube_video_id && (
+              <iframe
+                title="Category Video"
+                src={`https://www.youtube.com/embed/${category.youtube_video_id}`}
+                tw="w-full h-full mt-10 flex-1"
+                style={{
+                  minHeight: '360px',
+                }}
+                frameBorder="0"
+                allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              />
+            )}
+
+            <div tw="prose">
+              <ul tw="mt-10 text-lg text-justify pb-20 space-y-2">
+                {category.articles.length ? (
+                  category.articles.map(({ title, url }) => (
+                    <li key={title}>
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        tw="block"
+                      >
+                        {title}
+                      </a>
+                    </li>
+                  ))
+                ) : (
+                  <h3 tw="text-center">
+                    Lo sentimos. Por ahora no hay artículos disponibles.
+                  </h3>
+                )}
+              </ul>
+            </div>
           </>
         )}
       </Container>

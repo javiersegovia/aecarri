@@ -8,6 +8,8 @@ export interface Category {
   id: string
   name: string
   articles: Article[]
+  icon?: 'book' | 'pencil' | 'coins' | 'health'
+  youtube_video_id?: string
 }
 
 export interface HomeData {

@@ -8,7 +8,7 @@ const GoBack = () => {
     <>
       <Link href="/" passHref>
         <a
-          tw="text-black cursor-pointer text-lg font-medium fixed top-5 flex items-center left-10"
+          tw="text-black bg-white px-5 py-2 rounded-md cursor-pointer text-lg font-bold fixed top-5 flex items-center left-10"
           style={
             {
               // mixBlendMode: 'difference',

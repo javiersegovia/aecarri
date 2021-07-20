@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "articles": {
+      "via": "category",
+      "collection": "articles"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "pencil",
+        "book",
+        "health",
+        "coins"
+      ],
+      "required": true
+    },
+    "youtube_video_id": {
+      "type": "string"
+    }
+  }
+}

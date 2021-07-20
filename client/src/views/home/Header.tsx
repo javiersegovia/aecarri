@@ -30,13 +30,13 @@ const socialLinks = {
 }
 
 const Header = () => {
-  const { data: homeData } = useQuery<HomeData>('/home')
+  const { data: homeData } = useQuery<HomeData>('/homepage')
 
   return (
     <FullScreen
-      tw="bg-green-700"
+      tw="bg-green-700 bg-top"
       style={{
-        backgroundImage: `linear-gradient(rgba(40, 0, 70, .4), rgba(50, 0, 100, .35)), url(/images/people1.jpeg)`,
+        backgroundImage: `linear-gradient(rgba(40, 0, 70, .0), rgba(50, 0, 100, .0)), url(/images/home1.jpg)`,
       }}
     >
       <header
@@ -45,7 +45,7 @@ const Header = () => {
       >
         {homeData && (
           <>
-            <h1 tw="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl leading-normal">
+            <h1 tw="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-2xl leading-normal">
               {homeData.phrase}
             </h1>
             <div tw="mt-10 h-1 bg-white w-24 rounded-sm" />

@@ -2,9 +2,15 @@ import React from 'react'
 import _tw from 'twin.macro'
 import Link from 'next/link'
 import FullScreen from 'src/components/UI/FullScreen'
-import { GiBookmarklet } from 'react-icons/gi'
+import {
+  GiBookmarklet,
+  GiTwoCoins,
+  GiPencilBrush,
+  GiHealthNormal,
+} from 'react-icons/gi'
 import { useQuery } from 'react-query'
 import { Category } from 'src/utils/types'
+import { Fragment } from 'react'
 interface IssueProps {
   icon: React.ComponentType<{ className?: string }>
   title: string
@@ -14,12 +20,19 @@ interface IssueProps {
 const Issue = ({ icon: Icon, title, href }: IssueProps) => {
   return (
     <Link href={href} passHref>
-      <a tw="rounded-md bg-white text-indigo-750 cursor-pointer text-center shadow p-10 w-full">
-        <Icon className="text-6xl mx-auto" />
-        <h3 tw="text-xl font-bold mt-5">{title}</h3>
+      <a tw="rounded-md bg-white text-indigo-750 cursor-pointer text-center shadow py-6 lg:p-10 w-full opacity-80">
+        <Icon className="text-5xl sm:text-6xl mx-auto" />
+        <h3 tw="text-lg sm:text-xl font-bold mt-5">{title}</h3>
       </a>
     </Link>
   )
+}
+
+const iconKeys = {
+  book: GiBookmarklet,
+  pencil: GiPencilBrush,
+  coins: GiTwoCoins,
+  health: GiHealthNormal,
 }
 
 const Issues = () => {
@@ -43,13 +56,13 @@ const Issues = () => {
           Haz click en cualquier asunto para conocer más »
         </p>
         {categories && (
-          <section tw="grid grid-flow-col gap-6 mt-10 mx-auto">
+          <section tw="grid grid-cols-2 lg:grid-flow-col gap-6 mt-10 mx-auto">
             {categories.map((category) => (
               <Issue
                 key={category.id}
                 href={`/posiciones-politicas/${category.id}`}
                 title={category.name}
-                icon={GiBookmarklet}
+                icon={(category.icon && iconKeys[category.icon]) || Fragment}
               />
             ))}
           </section>

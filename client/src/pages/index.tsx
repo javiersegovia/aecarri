@@ -39,7 +39,7 @@ const HomePage = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = createQueryClient()
-  await queryClient.prefetchQuery('/home')
+  await queryClient.prefetchQuery('/homepage')
   await queryClient.prefetchQuery('/categories')
 
   return {
