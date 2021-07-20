@@ -56,7 +56,7 @@ const Issues = () => {
           Haz click en cualquier asunto para conocer más »
         </p>
         {categories?.length && (
-          <section tw="grid grid-cols-2 lg:grid-flow-col gap-6 mt-10 mx-auto">
+          <section tw="grid grid-cols-2 lg:grid-cols-none lg:grid-flow-col gap-6 mt-10 mx-auto">
             {categories.map((category) => (
               <Issue
                 key={category.id}
