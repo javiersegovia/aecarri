@@ -55,7 +55,7 @@ const Issues = () => {
         <p tw="mt-2 ml-auto" className="text-shadow">
           Haz click en cualquier asunto para conocer más »
         </p>
-        {categories && (
+        {categories?.length && (
           <section tw="grid grid-cols-2 lg:grid-flow-col gap-6 mt-10 mx-auto">
             {categories.map((category) => (
               <Issue
