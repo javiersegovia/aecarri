@@ -11,7 +11,7 @@ const Contact = () => {
     <FullScreen
       tw="bg-green-700 pt-40 lg:bg-top bg-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(/images/casual1.jpeg)`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(/images/contactame.jpeg)`,
       }}
     >
       <header tw="my-auto sm:px-10 lg:px-96 text-black flex justify-center lg:justify-end">
@@ -20,23 +20,26 @@ const Contact = () => {
             tw="text-center sm:text-left text-3xl sm:text-4xl -mt-60 lg:text-5xl font-bold text-white leading-normal"
             className="text-shadow"
           >
-            Contacto
+            Contáctame
           </h1>
-          <section tw="bg-white rounded-md shadow p-10 mt-5 ml-auto text-gray-800 opacity-80">
+          <section tw="bg-white rounded-md shadow p-10 mt-5 ml-auto text-gray-800">
             {homeData && (
               <>
                 <p tw="block">
-                  <span tw="block lg:inline font-bold mr-1">
-                    Correo electrónico:
-                  </span>
+                  <span tw="block font-bold mr-1">Correo electrónico</span>
                   {homeData.contact_email}
                 </p>
                 <p tw="mt-4">
-                  <span tw="block lg:inline font-bold mr-1">WhatsApp:</span>
+                  <span tw="block font-bold mr-1">WhatsApp</span>
+                  {homeData.whatsApp}
+                </p>
+                <p tw="mt-4">
+                  <span tw="block font-bold mr-1">Teléfono</span>
                   {homeData.contact_phone}
                 </p>
               </>
             )}
+            <img tw="mt-5" src="/images/whatsapp-qr.png" alt="QR Code" />
           </section>
         </div>
       </header>

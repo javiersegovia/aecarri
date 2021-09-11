@@ -8,6 +8,7 @@ import {
   GiPencilBrush,
   GiHealthNormal,
 } from 'react-icons/gi'
+import { FaCity } from 'react-icons/fa'
 import { useQuery } from 'react-query'
 import { Category } from 'src/utils/types'
 import { Fragment } from 'react'
@@ -33,6 +34,7 @@ const iconKeys = {
   pencil: GiPencilBrush,
   coins: GiTwoCoins,
   health: GiHealthNormal,
+  city: FaCity,
 }
 
 const Issues = () => {
@@ -42,7 +44,7 @@ const Issues = () => {
     <FullScreen
       tw="bg-green-700 pt-40"
       style={{
-        backgroundImage: `linear-gradient(rgba(40, 0, 70, .15), rgba(50, 0, 100, .35)), url(/images/speech3.jpeg)`,
+        backgroundImage: `linear-gradient(#0e01183f, #1a023159), url(/images/posiciones-politicas.jpg)`,
       }}
     >
       <header tw="my-auto px-10 lg:px-24 text-white">

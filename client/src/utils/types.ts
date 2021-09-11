@@ -16,4 +16,5 @@ export interface HomeData {
   phrase: string
   contact_email: string
   contact_phone: string
+  whatsApp: string
 }

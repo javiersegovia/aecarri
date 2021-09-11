@@ -25,7 +25,8 @@
         "pencil",
         "book",
         "health",
-        "coins"
+        "coins",
+        "city"
       ],
       "required": true
     },

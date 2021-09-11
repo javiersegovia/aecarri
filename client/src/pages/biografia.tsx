@@ -10,7 +10,7 @@ const BiographyPage = () => {
         tw="bg-black bg-no-repeat bg-top bg-cover mt-10 rounded-md h-96 w-full max-w-screen-2xl mx-auto"
         style={{
           height: '70vh',
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .5)), url(/images/people5.jpg)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .5)), url(/images/biografia.jpeg)`,
         }}
       >
         <GoBack />
@@ -34,7 +34,7 @@ const BiographyPage = () => {
             pública y el accionar privado, ha sido férreo defensor de la
             educación pública oficial venezolana y ha estimulado tanto programas
             para fomentar la transformación del sistema educativo como la
-            ejecución de propuestas para enseñar emprendimiento a los
+            ejecución de propuestas para formar en emprendimiento a los
             ciudadanos.
           </p>
           <h3>Preparación académica</h3>
@@ -47,11 +47,21 @@ const BiographyPage = () => {
             Tributación Urbana en el Lincoln Institute of Land Policy en Boston,
             Massachusets, EEUU (2003).
           </p>
+
+          <img src="/images/biografia2.jpeg" alt="Familia" />
+
+          <h3>Un hombre de familia</h3>
+          <p>
+            Casado con María Luisa Feo La Cruz desde 2004, tiene tres hijos:
+            Antonio José, Sofía Eugenia y Constanza Victoria. Es el mayor de
+            tres hermanos. Hijo de Antonio Ecarri Bolívar y Milagros Angola de
+            Ecarri.
+          </p>
           <h3>El Educador</h3>
           <p>
             Desde los 17 años, se distinguió por su vocación a la enseñanza. Se
-            inició asumiendo suplencias docentes en las materias de historia
-            contemporánea de Venezuela en los más importantes liceos de la
+            inició asumiendo suplencias docentes en las materias de Historia
+            Contemporánea de Venezuela en los más importantes liceos de la
             ciudad de Valencia, Carabobo.
           </p>
           <p>
@@ -59,17 +69,17 @@ const BiographyPage = () => {
             materias de Derecho Romano y Economía Política en su alma mater, la
             Universidad de Carabobo (UC). Fundó la Asociación de Preparadores
             universitarios, institución que reunió a los asistentes de cátedra y
-            a los mejores estudiantes de esta alma mater.
+            a los mejores estudiantes de esta casa de estudio.
           </p>
           <p>
-            En el rol de educador, que ocupa hasta la actualidad, ha asumido –en
-            distintos periodos- las cátedras Problemas Federales y Municipales,
-            Derecho Tributario, Economía Política y Filosofía Política, en las
-            principales casas de estudios del país: Universidad Metropolitana
-            (Unimet), Universidad Santa María (USM), Universidad Católica Andrés
-            Bello (UCAB), Universidad Católica del Táchira (UCAT), y Universidad
-            Monteávila. En esta última se desempeña actualmente como profesor en
-            el Área de Postgrado.
+            En el rol de educador, el cual ocupa hasta la actualidad, ha asumido
+            –en distintos periodos- las cátedras Problemas Federales y
+            Municipales, Derecho Tributario, Economía Política y Filosofía
+            Política, en las principales casas de estudios del país: Universidad
+            Metropolitana (Unimet), Universidad Santa María (USM), Universidad
+            Católica Andrés Bello (UCAB), Universidad Católica del Táchira
+            (UCAT), y Universidad Monteávila. En esta última se desempeña
+            actualmente como profesor en el área de Postgrado.
           </p>
           <h3>Promotor de la participación ciudadana</h3>
           <p>
@@ -84,8 +94,8 @@ const BiographyPage = () => {
           <p>
             En el mismo año 2006, Ecarri sentó las bases de la Casa Arturo Uslar
             Pietri, institución que rescató la memoria histórica y la propiedad
-            que sirvió como casa del notable político y escritor reconocido como
-            uno de los más importantes del Siglo XX venezolano: Arturo Uslar
+            que sirvió como casa del notable político y uno de los escritores
+            venezolanos más importantes del Siglo XX venezolano: Arturo Uslar
             Pietri.
           </p>
           <p>
@@ -94,13 +104,13 @@ const BiographyPage = () => {
             fomentar la escritura en los niños venezolanos, así como en
             trinchera de defensa para la educación venezolana. También ha
             servido como epicentro de debate sobre el pasado, presente y futuro,
-            de la industria petrolera venezolana, punta de lanza del pensamiento
-            de Uslar Pietri.
+            de la industria petrolera venezolana, y punta de lanza del
+            pensamiento de Uslar Pietri.
           </p>
           <p>
             Este centro cultural es la única casa museo de un escritor
             venezolano operativa en el país, dedicada a cuidar el legado de uno
-            de los más importantes protagonista de la historia contemporánea
+            de los más importantes protagonistas de la historia contemporánea
             venezolana. Sirve como espacio permanente de exposiciones, charlas,
             talleres, simposios, e innumerables actividades destinadas a la
             promoción del saber.
@@ -137,7 +147,7 @@ const BiographyPage = () => {
             formación del Consenso Educativo, agrupando en éste a los
             principales actores del país en defensa de los ataques a la escuela
             venezolana por parte del gobierno de Hugo Chávez y posteriormente de
-            NicolásMaduro. El mismo ha servido, desde 2008, además como muro de
+            Nicolás Maduro. El mismo ha servido, desde 2008, además como muro de
             contención a diversos intentos por ideologizar a los niños
             venezolanos.
           </p>
@@ -159,7 +169,7 @@ const BiographyPage = () => {
             El programa emblema: <strong>Las Casas del Lápiz</strong>
           </p>
           <p>
-            Ecarri, en su afán por empoderar a los venezolanos de las zonas más
+            En su afán por empoderar a los venezolanos de las zonas más
             deprimidas, desde el año 2010 ha germinado en las principales
             parroquias populares de Caracas centros de formación para el
             liderazgo y el emprendimiento, bautizados como “Casas del Lápiz”,
@@ -169,15 +179,19 @@ const BiographyPage = () => {
           </p>
           <p>
             Es un modelo educativo que ha permitido, hasta la fecha, a más de
-            10.000 hombres y mujeres del país hacerse emprendedores, rompiendo
+            8.200 hombres y mujeres en la ciudad capital, y un total 11.000
+            ciudadanos en todo el país, hacerse emprendedores, rompiendo
             círculos viciosos de vidas sumidas en la pobreza.
           </p>
           <p>
             El proyecto, que se originó en el deprimido oeste caraqueño, hoy se
             replica en seis estados del país, entre los que destacan los
-            olvidados estados Aragua y Guárico, corazón de los llanos
-            venezolanos; y cuenta con equipos promotores en otras latitudes.
+            olvidados Aragua y Guárico, corazón de los llanos venezolanos; y
+            cuenta con equipos promotores en otras latitudes.
           </p>
+
+          <img src="/images/biografia3.jpg" alt="Alianza del Lapiz" />
+
           <h3>Activismo político</h3>
           <p>
             El nombre de Antonio Ecarri surgió en 2010, de cara a las elecciones
@@ -203,32 +217,36 @@ const BiographyPage = () => {
             Carabobo.
           </p>
           <p>
-            Desde el año 2002 Ecarri se había abocado al ejercicio público en la
-            alcaldía de Chacao, estado Miranda. Fue Subdirector de
-            Administración Tributaria, Síndico Procurador Municipal y en 2005
+            Desde el año 2002, Ecarri se abocó al ejercicio público en la
+            alcaldía de Chacao, estado Miranda. Fue subdirector de
+            Administración Tributaria, síndico procurador municipal y en 2005
             fue electo concejal y presidente del Concejo Municipal. Su gestión
             permitió crear legislación clave en materia de transparencia y
-            rendición de cuentas, la creación de Premios de Literatura, el
-            impulso de la construcción importantes centros educativos que luego
+            rendición de cuentas, la creación de Premios de Literatura. Además
+            impulsó la construcción de importantes centros educativos que luego
             se convirtieron en modelos educativos de primer orden.
           </p>
           <p>
             En el 2013, y con el firme propósito de transformar a Caracas en la
-            capital de la educación para la América Latina, Ecarri puso su
-            nombre al servicio de los caraqueños. Pese a ser el gran favorito en
-            las encuestas y único con capacidad real de frenar a Jorge
-            Rodríguez, abanderado del chavismo, le tocó contarse con un
-            aspirante paracaidista opositor.
+            capital de la educación de América Latina, Ecarri puso su nombre al
+            servicio de los caraqueños. Pese a ser el gran favorito en las
+            encuestas y único con capacidad real de frenar a Jorge Rodríguez,
+            entonces abanderado del chavismo, le tocó contarse con un aspirante
+            paracaidista opositor.
           </p>
           <p>
             A escasas semanas de la contienda, prefirió –apostando a la unidad-
             hacerse a un lado para evitar ser motivo del fracaso de la
-            alternativa democrática.
+            alternativa democrática. Desde entonces, y pese a no tener cargo
+            público, Ecarri ha sido el único portavoz opositor en continuar el
+            trabajo social permanente en las zonas más vulnerables de la ciudad
+            capital.
           </p>
           <p>
-            Desde entonces, y pese a no tener cargo público, Ecarri ha sido el
-            único portavoz opositor en continuar el trabajo social permanente en
-            las zonas más vulnerables de la ciudad capital.
+            Hoy, con el respaldo de la Alianza del Lápiz, proyecto político
+            formalizado en el año 2013 y validada en 2018 ante el Consejo
+            Nacional Electoral (CNE), mantiene importantes estructuras de
+            trabajo social y político en las 22 parroquias del oeste capitalino.
           </p>
           <p>
             Hoy, con el respaldo de la Alianza del Lápiz, proyecto político
@@ -244,13 +262,6 @@ const BiographyPage = () => {
             Madrid y Caracas. Esta iniciativa no es aislada, ha sido consultor
             privado financiero y experto en creación de nuevos negocios desde
             haber obtenido sus estudios de postgrado en la UCAB.
-          </p>
-          <h3>Un hombre de familia</h3>
-          <p>
-            Casado con María Luisa Feo La Cruz desde 2004, tiene tres hijos:
-            Antonio José, Sofía Eugenia y Constanza Victoria. Es el mayor de
-            tres hermanos. Hijo de Antonio Ecarri Bolívar y Milagros Angola de
-            Ecarri.
           </p>
         </article>
       </Container>
