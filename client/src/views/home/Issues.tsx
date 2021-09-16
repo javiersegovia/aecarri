@@ -1,6 +1,5 @@
 import React from 'react'
 import _tw from 'twin.macro'
-import Link from 'next/link'
 import FullScreen from 'src/components/UI/FullScreen'
 import {
   GiBookmarklet,
