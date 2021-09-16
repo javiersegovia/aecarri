@@ -20,12 +20,15 @@ interface IssueProps {
 
 const Issue = ({ icon: Icon, title, href }: IssueProps) => {
   return (
-    <Link href={href} passHref>
-      <a tw="rounded-md bg-white text-indigo-750 cursor-pointer text-center shadow py-6 lg:p-10 w-full opacity-80">
-        <Icon className="text-5xl sm:text-6xl mx-auto" />
-        <h3 tw="text-lg sm:text-xl font-bold mt-5">{title}</h3>
-      </a>
-    </Link>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      tw="rounded-md bg-white text-indigo-750 cursor-pointer text-center shadow py-6 lg:p-10 w-full opacity-80"
+    >
+      <Icon className="text-5xl sm:text-6xl mx-auto" />
+      <h3 tw="text-lg sm:text-xl font-bold mt-5">{title}</h3>
+    </a>
   )
 }
 
@@ -62,7 +65,7 @@ const Issues = () => {
             {categories.map((category) => (
               <Issue
                 key={category.id}
-                href={`/posiciones-politicas/${category.id}`}
+                href={category.playlist_url}
                 title={category.name}
                 icon={(category.icon && iconKeys[category.icon]) || Fragment}
               />

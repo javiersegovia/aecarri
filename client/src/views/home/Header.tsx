@@ -22,15 +22,11 @@ const SocialIcon = ({ children, href, ...otherProps }: SocialIconProps) => (
   </a>
 )
 
-const socialLinks = {
-  instagram: 'https://www.instagram.com/aecarrivzla',
-  twitter: 'https://twitter.com/aecarri ',
-  facebook: 'https://facebook.com/AEcarri',
-  youtube: 'https://youtube.com/c/AntonioEcarri',
-}
-
 const Header = () => {
   const { data: homeData } = useQuery<HomeData>('/homepage')
+
+  const { phrase, instagram_url, twitter_url, facebook_url, youtube_url } =
+    homeData || {}
 
   return (
     <FullScreen
@@ -43,27 +39,35 @@ const Header = () => {
         tw="my-auto pt-8 px-10 lg:px-20 text-white"
         className="text-shadow"
       >
-        {homeData && (
+        {phrase && (
           <>
-            <h1 tw="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-2xl leading-normal">
-              {homeData.phrase}
+            <h1 tw="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-md lg:max-w-lg xl:max-w-2xl leading-normal">
+              {phrase}
             </h1>
             <div tw="mt-10 h-1 bg-white w-24 rounded-sm" />
           </>
         )}
         <div tw="mt-10 flex space-x-6">
-          <SocialIcon href={socialLinks.instagram}>
-            <FiInstagram />
-          </SocialIcon>
-          <SocialIcon href={socialLinks.twitter}>
-            <FiTwitter />
-          </SocialIcon>
-          <SocialIcon href={socialLinks.facebook}>
-            <FiFacebook />
-          </SocialIcon>
-          <SocialIcon href={socialLinks.youtube}>
-            <FiYoutube />
-          </SocialIcon>
+          {instagram_url && (
+            <SocialIcon href={instagram_url}>
+              <FiInstagram />
+            </SocialIcon>
+          )}
+          {twitter_url && (
+            <SocialIcon href={twitter_url}>
+              <FiTwitter />
+            </SocialIcon>
+          )}
+          {facebook_url && (
+            <SocialIcon href={facebook_url}>
+              <FiFacebook />
+            </SocialIcon>
+          )}
+          {youtube_url && (
+            <SocialIcon href={youtube_url}>
+              <FiYoutube />
+            </SocialIcon>
+          )}
         </div>
       </header>
     </FullScreen>

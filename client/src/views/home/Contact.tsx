@@ -14,7 +14,7 @@ const Contact = () => {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(/images/contactame.jpeg)`,
       }}
     >
-      <header tw="my-auto sm:px-10 lg:px-96 text-black flex justify-center lg:justify-end">
+      <header tw="my-auto lg:px-10 xl:px-32 text-black flex justify-center lg:justify-end">
         <div>
           <h1
             tw="text-center sm:text-left text-3xl sm:text-4xl -mt-60 lg:text-5xl font-bold text-white leading-normal"

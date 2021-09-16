@@ -30,7 +30,7 @@
       ],
       "required": true
     },
-    "youtube_video_id": {
+    "playlist_url": {
       "type": "string"
     }
   }
