@@ -2,8 +2,14 @@ import React from 'react'
 import _tw from 'twin.macro'
 import FullScreen from 'src/components/UI/FullScreen'
 import Image from 'next/image'
+import { useQuery } from 'react-query'
+import { HomeData } from 'src/utils/types'
 
 const Organizations = () => {
+  const { data: homeData } = useQuery<HomeData>('/homepage')
+
+  const { instagram_url } = homeData || {}
+
   return (
     <FullScreen
       tw="bg-black md:pt-40 bg-center"
@@ -23,13 +29,24 @@ const Organizations = () => {
             Organizaciones que represento
           </h1> */}
           <section tw="rounded-md relative inline-grid md:grid-flow-col gap-5 md:gap-20 items-center mx-auto">
+            {instagram_url && (
+              <a href={instagram_url}>
+                <Image
+                  width={150}
+                  height={140}
+                  alt="Alianza del lápiz"
+                  src="/images/logos/ecarri.png"
+                  tw="cursor-pointer"
+                />
+              </a>
+            )}
             <a href="https://alianzadellapiz.com">
               <Image
                 width={150}
                 height={140}
                 alt="Alianza del lápiz"
-                src="/images/logos/alianza-del-lapiz2.jpg"
-                tw="cursor-pointer rounded-md"
+                src="/images/logos/alianza-del-lapiz.png"
+                tw="cursor-pointer"
               />
             </a>
             <a href="https://casauslarpietri.org">
@@ -37,7 +54,7 @@ const Organizations = () => {
                 width={155}
                 height={150}
                 alt="Arturo Uslar Pietri"
-                src="/images/logos/arturouslar.jpg"
+                src="/images/logos/arturo-uslar.png"
                 tw="cursor-pointer rounded-md"
               />
             </a>
@@ -46,7 +63,7 @@ const Organizations = () => {
                 width={100}
                 height={100}
                 alt="Ecarri"
-                src="/images/logos/gfs.png"
+                src="/images/logos/gfs-blue.png"
                 tw="cursor-pointer"
               />
             </a>
