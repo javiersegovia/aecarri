@@ -19,8 +19,6 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
             <Head>
               <script
                 async
@@ -37,6 +35,8 @@ export default class MyDocument extends Document {
                 }}
               />
             </Head>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
           </>
         ),
       }
